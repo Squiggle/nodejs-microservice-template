@@ -21,16 +21,14 @@ components:
       type: array
       items:
         $ref: '#/components/schemas/user'
-    examples:
-      newUser:
-        name: Darren
-      user:
-        id: 1
-        name: Alisdair
-      users:
-        - id: 1
-          name: Adam
-        - id: 2
-          name: Betty
-        - id: 3
-          name: Calvin
+examples:
+  user:
+    id: 1
+    name: Alisdair
+  users:
+    - id: 1
+      name: Adam
+    - id: 2
+      name: Betty
+    - id: 3
+      name: Calvin

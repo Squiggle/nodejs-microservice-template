@@ -10,6 +10,8 @@ paths:
   /users:
     get:
       operationId: getAllUsers
+      tags:
+        - user
       description: Returns a list of all users in the system
       responses:
         '200':
@@ -21,6 +23,8 @@ paths:
   /user:
     get:
       operationId: getUser
+      tags:
+        - user
       description: Returns an individual user by id
       responses:
         '200':
@@ -29,10 +33,14 @@ paths:
             application/json:
               schema:
                 $ref: 'models/user.yml#/components/schemas/user'
+              example:
+                $ref: 'models/user.yml#/examples/user'
         '404':
           description: No user with given ID exists
     post:
       operationId: createUser
+      tags:
+        - user
       requestBody:
         content:
           application/json:
