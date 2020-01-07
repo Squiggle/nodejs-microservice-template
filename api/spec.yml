@@ -28,7 +28,7 @@ paths:
       description: Returns an individual user by id
       responses:
         '200':
-          description: A user
+          description: OK
           content:
             application/json:
               schema:
